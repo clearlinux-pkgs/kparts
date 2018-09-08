@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kparts
-Version  : 5.49.0
-Release  : 2
-URL      : https://download.kde.org/stable/frameworks/5.49/kparts-5.49.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.49/kparts-5.49.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.49/kparts-5.49.0.tar.xz.sig
+Version  : 5.50.0
+Release  : 3
+URL      : https://download.kde.org/stable/frameworks/5.50/kparts-5.50.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.50/kparts-5.50.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.50/kparts-5.50.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -19,17 +19,7 @@ Requires: kparts-data
 Requires: kparts-locales
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
-BuildRequires : kcodecs-dev
-BuildRequires : kcompletion-dev
-BuildRequires : kiconthemes-dev
-BuildRequires : kitemviews-dev
-BuildRequires : kjobwidgets-dev
-BuildRequires : ktextwidgets-dev
-BuildRequires : kwidgetsaddons-dev
-BuildRequires : kxmlgui-dev
 BuildRequires : qtbase-dev qtbase-extras mesa-dev
-BuildRequires : solid-dev
-BuildRequires : sonnet-dev
 
 %description
 How To Build This Project
@@ -88,14 +78,14 @@ locales components for the kparts package.
 
 
 %prep
-%setup -q -n kparts-5.49.0
+%setup -q -n kparts-5.50.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534115168
+export SOURCE_DATE_EPOCH=1536430496
 mkdir clr-build
 pushd clr-build
 %cmake ..
@@ -103,7 +93,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1534115168
+export SOURCE_DATE_EPOCH=1536430496
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/kparts
 cp COPYING.LIB %{buildroot}/usr/share/doc/kparts/COPYING.LIB
@@ -200,7 +190,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Parts.so.5
-/usr/lib64/libKF5Parts.so.5.49.0
+/usr/lib64/libKF5Parts.so.5.50.0
 /usr/lib64/qt5/plugins/notepadpart.so
 /usr/lib64/qt5/plugins/spellcheckplugin.so
 

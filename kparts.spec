@@ -6,7 +6,7 @@
 #
 Name     : kparts
 Version  : 5.52.0
-Release  : 6
+Release  : 7
 URL      : https://download.kde.org/stable/frameworks/5.52/kparts-5.52.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.52/kparts-5.52.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.52/kparts-5.52.0.tar.xz.sig
@@ -31,14 +31,6 @@ cd build
 cmake -DCMAKE_INSTALL_PREFIX=$PROJECTINSTALLDIR -DCMAKE_BUILD_TYPE=Debug ..      <- do not forget the ..
 make
 make install or su -c 'make install'
-
-%package abi
-Summary: abi components for the kparts package.
-Group: Default
-
-%description abi
-abi components for the kparts package.
-
 
 %package data
 Summary: data components for the kparts package.
@@ -93,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541879374
+export SOURCE_DATE_EPOCH=1542743920
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -101,7 +93,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1541879374
+export SOURCE_DATE_EPOCH=1542743920
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kparts
 cp COPYING.LIB %{buildroot}/usr/share/package-licenses/kparts/COPYING.LIB
@@ -112,10 +104,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files abi
-%defattr(-,root,root,-)
-/usr/share/abi/libKF5Parts.so.5.52.0.abi
 
 %files data
 %defattr(-,root,root,-)

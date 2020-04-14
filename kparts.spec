@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kparts
-Version  : 5.68.0
-Release  : 25
-URL      : https://download.kde.org/stable/frameworks/5.68/kparts-5.68.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.68/kparts-5.68.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.68/kparts-5.68.0.tar.xz.sig
+Version  : 5.69.0
+Release  : 26
+URL      : https://download.kde.org/stable/frameworks/5.69/kparts-5.69.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.69/kparts-5.69.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.69/kparts-5.69.0.tar.xz.sig
 Summary  : Document centric plugin system
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -80,15 +80,15 @@ locales components for the kparts package.
 
 
 %prep
-%setup -q -n kparts-5.68.0
-cd %{_builddir}/kparts-5.68.0
+%setup -q -n kparts-5.69.0
+cd %{_builddir}/kparts-5.69.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584324592
+export SOURCE_DATE_EPOCH=1586903261
 mkdir -p clr-build
 pushd clr-build
 # -Werror is for werrorists
@@ -105,10 +105,10 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1584324592
+export SOURCE_DATE_EPOCH=1586903261
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kparts
-cp %{_builddir}/kparts-5.68.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/kparts/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/kparts-5.69.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/kparts/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -148,6 +148,7 @@ popd
 /usr/include/KF5/KParts/KParts/Part
 /usr/include/KF5/KParts/KParts/PartActivateEvent
 /usr/include/KF5/KParts/KParts/PartBase
+/usr/include/KF5/KParts/KParts/PartLoader
 /usr/include/KF5/KParts/KParts/PartManager
 /usr/include/KF5/KParts/KParts/PartSelectEvent
 /usr/include/KF5/KParts/KParts/Plugin
@@ -181,6 +182,7 @@ popd
 /usr/include/KF5/KParts/kparts/part.h
 /usr/include/KF5/KParts/kparts/partactivateevent.h
 /usr/include/KF5/KParts/kparts/partbase.h
+/usr/include/KF5/KParts/kparts/partloader.h
 /usr/include/KF5/KParts/kparts/partmanager.h
 /usr/include/KF5/KParts/kparts/partselectevent.h
 /usr/include/KF5/KParts/kparts/plugin.h
@@ -202,8 +204,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Parts.so.5
-/usr/lib64/libKF5Parts.so.5.68.0
-/usr/lib64/qt5/plugins/notepadpart.so
+/usr/lib64/libKF5Parts.so.5.69.0
 /usr/lib64/qt5/plugins/spellcheckplugin.so
 
 %files license

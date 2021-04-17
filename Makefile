@@ -1,5 +1,5 @@
 PKG_NAME := kparts
-URL = https://download.kde.org/stable/frameworks/5.78/kparts-5.78.0.tar.xz
+URL = https://download.kde.org/stable/frameworks/5.81/kparts-5.81.0.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common

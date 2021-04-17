@@ -110,6 +110,7 @@ libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart16setLocalFilePathERK7QString
 libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart16showProgressInfoEb
 libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart21setLocalFileTemporaryEb
 libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart22setProgressInfoEnabledEb
+libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart26completedWithPendingActionEv
 libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart6setUrlERK4QUrl
 libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart7openUrlERK4QUrl
 libKF5Parts.so.5:_ZN6KParts12ReadOnlyPart7startedEPN3KIO3JobE
@@ -414,7 +415,9 @@ libKF5Parts.so.5:_ZN6KParts4PartD2Ev
 libKF5Parts.so.5:_ZN6KParts5Event4testEPK6QEvent
 libKF5Parts.so.5:_ZN6KParts5Event4testEPK6QEventPKc
 libKF5Parts.so.5:_ZN6KParts5EventC1EPKc
+libKF5Parts.so.5:_ZN6KParts5EventC1ERNS_12EventPrivateE
 libKF5Parts.so.5:_ZN6KParts5EventC2EPKc
+libKF5Parts.so.5:_ZN6KParts5EventC2ERNS_12EventPrivateE
 libKF5Parts.so.5:_ZN6KParts5EventD0Ev
 libKF5Parts.so.5:_ZN6KParts5EventD1Ev
 libKF5Parts.so.5:_ZN6KParts5EventD2Ev

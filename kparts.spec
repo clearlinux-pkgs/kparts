@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : kparts
-Version  : 5.95.0
-Release  : 47
-URL      : https://download.kde.org/stable/frameworks/5.95/kparts-5.95.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.95/kparts-5.95.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.95/kparts-5.95.0.tar.xz.sig
+Version  : 5.96.0
+Release  : 48
+URL      : https://download.kde.org/stable/frameworks/5.96/kparts-5.96.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.96/kparts-5.96.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.96/kparts-5.96.0.tar.xz.sig
 Summary  : Document centric plugin system
 Group    : Development/Tools
 License  : CC0-1.0 GPL-2.0 LGPL-2.0 LGPL-2.1 LGPL-3.0
@@ -89,15 +89,15 @@ locales components for the kparts package.
 
 
 %prep
-%setup -q -n kparts-5.95.0
-cd %{_builddir}/kparts-5.95.0
+%setup -q -n kparts-5.96.0
+cd %{_builddir}/kparts-5.96.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1655148728
+export SOURCE_DATE_EPOCH=1657643730
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -113,18 +113,18 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1655148728
+export SOURCE_DATE_EPOCH=1657643730
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kparts
-cp %{_builddir}/kparts-5.95.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kparts/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/kparts-5.95.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/e712eadfab0d2357c0f50f599ef35ee0d87534cb
-cp %{_builddir}/kparts-5.95.0/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/kparts/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/kparts-5.95.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/kparts-5.95.0/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/6f1f675aa5f6a2bbaa573b8343044b166be28399
-cp %{_builddir}/kparts-5.95.0/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/kparts/757b86330df80f81143d5916b3e92b4bcb1b1890
-cp %{_builddir}/kparts-5.95.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kparts/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/kparts-5.95.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kparts/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/kparts-5.95.0/templates/kpartsapp/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/e712eadfab0d2357c0f50f599ef35ee0d87534cb
+cp %{_builddir}/kparts-5.96.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kparts/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/kparts-5.96.0/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/e712eadfab0d2357c0f50f599ef35ee0d87534cb
+cp %{_builddir}/kparts-5.96.0/LICENSES/LGPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/kparts/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/kparts-5.96.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/kparts-5.96.0/LICENSES/LGPL-2.1-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/6f1f675aa5f6a2bbaa573b8343044b166be28399
+cp %{_builddir}/kparts-5.96.0/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/kparts/757b86330df80f81143d5916b3e92b4bcb1b1890
+cp %{_builddir}/kparts-5.96.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kparts/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/kparts-5.96.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/kparts/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/kparts-5.96.0/templates/kpartsapp/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kparts/e712eadfab0d2357c0f50f599ef35ee0d87534cb
 pushd clr-build
 %make_install
 popd
@@ -221,7 +221,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Parts.so.5
-/usr/lib64/libKF5Parts.so.5.95.0
+/usr/lib64/libKF5Parts.so.5.96.0
 /usr/lib64/qt5/plugins/spellcheckplugin.so
 
 %files license

@@ -9,7 +9,7 @@
 #
 Name     : kparts
 Version  : 6.0.0
-Release  : 70
+Release  : 71
 URL      : https://download.kde.org/stable/frameworks/6.0/kparts-6.0.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/6.0/kparts-6.0.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/6.0/kparts-6.0.0.tar.xz.sig
